@@ -17,7 +17,7 @@ import {
   <header class="py-3 bg-white shadow">
     <nav class="container flex items-center justify-between mx-auto">
       <div class="flex items-center gap-x-2">
-        <img class="w-9" :src="logo" alt="Logo" />
+        <!-- <img class="w-9" :src="logo" alt="Logo" /> -->
         <div>
           <h1 class="text-heading text-xl font-[700] font-mon">Dokan</h1>
         </div>

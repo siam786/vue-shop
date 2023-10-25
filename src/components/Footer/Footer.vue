@@ -2,11 +2,11 @@
 import { RouterLink } from "vue-router";
 </script>
 <template>
-  <section class="bg-primary py-14">
+  <section class="bg-purple-500 py-14">
     <div class="container">
       <div class="grid grid-cols-10 gap-x-12">
         <div class="col-span-3 space-y-4">
-          <h2 class="text-white text-2xl font-[700] font-mon">Multimart</h2>
+          <h2 class="text-white text-2xl font-[700] font-mon">Dokan</h2>
           <p class="text-white font-[500] text-sm">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt
             rem doloremque possimus ex? Omnis, est error voluptatum facere
@@ -15,7 +15,7 @@ import { RouterLink } from "vue-router";
         </div>
         <div class="col-span-2 space-y-4 text-white">
           <h4 class="text-lg font-[700] font-mon">Top Categories</h4>
-          <ul class="space-y-1 list-inside list-disc">
+          <ul class="space-y-1 list-disc list-inside">
             <li class="pt-1">
               <RouterLink to="/">Mobile Phones</RouterLink>
             </li>
@@ -32,7 +32,7 @@ import { RouterLink } from "vue-router";
         </div>
         <div class="col-span-2 space-y-4 text-white">
           <h4 class="text-lg font-[700] font-mon">Useful Links</h4>
-          <ul class="space-y-1 list-inside list-disc">
+          <ul class="space-y-1 list-disc list-inside">
             <li class="pt-1">
               <RouterLink to="/shop">Shop</RouterLink>
             </li>
@@ -125,7 +125,7 @@ import { RouterLink } from "vue-router";
                 />
               </svg>
 
-              <RouterLink to="/">contact@multimart.com</RouterLink>
+              <RouterLink to="/">contact@doak.com</RouterLink>
             </li>
           </ul>
         </div>
