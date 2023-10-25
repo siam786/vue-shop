@@ -17,11 +17,11 @@ defineProps({
 </script>
 <template>
   <div
-    class="relative flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md"
+    class="relative flex flex-col w-full max-w-xs overflow-hidden bg-white border border-gray-100 rounded-lg shadow-md"
   >
     <RouterLink
       :to="{ name: 'singleProduct', params: { id: product.id } }"
-      class="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl"
+      class="relative flex mx-3 mt-3 overflow-hidden h-60 rounded-xl"
     >
       <img
         class="object-cover object-center w-full h-full"
@@ -29,17 +29,17 @@ defineProps({
         alt="product image"
       />
       <span
-        class="absolute top-0 left-0 m-2 rounded-full bg-black px-2 text-center text-sm font-medium text-white"
+        class="absolute top-0 left-0 px-2 m-2 text-sm font-medium text-center text-white bg-black rounded-full"
         >{{ product.discountPercentage }}% OFF</span
       >
     </RouterLink>
-    <div class="mt-4 px-5 pb-5">
+    <div class="px-5 pb-5 mt-4">
       <RouterLink :to="{ name: 'singleProduct', params: { id: product.id } }">
         <h5 class="text-xl tracking-tight text-slate-900">
           {{ product.title }}
         </h5>
       </RouterLink>
-      <div class="mt-2 mb-5 space-x-1 flex items-center justify-between">
+      <div class="flex items-center justify-between mt-2 mb-5 space-x-1">
         <p>
           <span class="text-xl font-bold text-slate-900"
             >${{
@@ -49,14 +49,14 @@ defineProps({
               ).toFixed(2)
             }}</span
           >
-          <span class="text-sm text-slate-900 line-through"
+          <span class="text-sm line-through text-slate-900"
             >${{ product.price }}</span
           >
         </p>
         <div class="flex items-center">
           <svg
             aria-hidden="true"
-            class="h-4 w-4 text-yellow-300"
+            class="w-4 h-4 text-yellow-300"
             fill="currentColor"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +67,7 @@ defineProps({
           </svg>
           <svg
             aria-hidden="true"
-            class="h-4 w-4 text-yellow-300"
+            class="w-4 h-4 text-yellow-300"
             fill="currentColor"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +78,7 @@ defineProps({
           </svg>
           <svg
             aria-hidden="true"
-            class="h-4 w-4 text-yellow-300"
+            class="w-4 h-4 text-yellow-300"
             fill="currentColor"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
@@ -89,7 +89,7 @@ defineProps({
           </svg>
           <svg
             aria-hidden="true"
-            class="h-4 w-4 text-yellow-300"
+            class="w-4 h-4 text-yellow-300"
             fill="currentColor"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
@@ -100,7 +100,7 @@ defineProps({
           </svg>
           <svg
             aria-hidden="true"
-            class="h-4 w-4 text-gray-400"
+            class="w-4 h-4 text-gray-400"
             fill="currentColor"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
@@ -117,11 +117,11 @@ defineProps({
       </div>
       <a
         href="#"
-        class="flex items-center justify-center rounded-md bg-slate-900 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-300"
+        class="flex items-center justify-center rounded-md bg-purple-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-purple-500 focus:outline-none focus:ring-4 focus:ring-blue-300"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="mr-2 h-6 w-6"
+          class="w-6 h-6 mr-2"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"

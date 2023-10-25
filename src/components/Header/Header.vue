@@ -21,9 +21,8 @@ import {
         <div>
           <h1 class="text-heading text-xl font-[700] font-mon">Dokan</h1>
         </div>
-      </div>
-      <ul class="flex items-center gap-x-3">
-        <li>
+        <ul class="flex ml-5 font-bold text-purple-500 gap-x-3">
+        <li class="">
           <RouterLink to="/">Home</RouterLink>
         </li>
         <li>
@@ -33,6 +32,8 @@ import {
           <RouterLink to="/cart">Cart</RouterLink>
         </li>
       </ul>
+      </div>
+      
       <div class="flex items-center gap-x-3">
         <span>
           <RouterLink to="/wish-list">
