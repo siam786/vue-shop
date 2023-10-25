@@ -14,12 +14,12 @@ import {
 } from "@heroicons/vue/24/outline";
 </script>
 <template>
-  <header class="bg-white py-3 shadow">
-    <nav class="container mx-auto flex items-center justify-between">
+  <header class="py-3 bg-white shadow">
+    <nav class="container flex items-center justify-between mx-auto">
       <div class="flex items-center gap-x-2">
         <img class="w-9" :src="logo" alt="Logo" />
         <div>
-          <h1 class="text-heading text-xl font-[700] font-mon">Multimart</h1>
+          <h1 class="text-heading text-xl font-[700] font-mon">Dokan</h1>
         </div>
       </div>
       <ul class="flex items-center gap-x-3">
@@ -91,7 +91,7 @@ import {
               leave-to-class="transform scale-95 opacity-0"
             >
               <MenuItems
-                class="absolute right-0 mt-2 w-40 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                class="absolute right-0 w-40 mt-2 origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
               >
                 <div v-if="authStore.isAuthenticated" class="px-1 py-1">
                   <MenuItem v-slot="{ active }">
@@ -103,7 +103,7 @@ import {
                     >
                       <PencilSquareIcon
                         :active="active"
-                        class="mr-2 w-4 h-4 text-gray-400"
+                        class="w-4 h-4 mr-2 text-gray-400"
                         aria-hidden="true"
                       />
                       Profile
@@ -118,7 +118,7 @@ import {
                     >
                       <Cog6ToothIcon
                         :active="active"
-                        class="mr-2 w-4 h-4 text-gray-400"
+                        class="w-4 h-4 mr-2 text-gray-400"
                         aria-hidden="true"
                       />
                       Settings
@@ -134,7 +134,7 @@ import {
                     >
                       <ArrowRightOnRectangleIcon
                         :active="active"
-                        class="mr-2 w-4 h-4 text-gray-400"
+                        class="w-4 h-4 mr-2 text-gray-400"
                         aria-hidden="true"
                       />
                       Sign out
@@ -152,7 +152,7 @@ import {
                       >
                         <ArrowLeftOnRectangleIcon
                           :active="active"
-                          class="mr-2 w-4 h-4 text-gray-400"
+                          class="w-4 h-4 mr-2 text-gray-400"
                           aria-hidden="true"
                         />
                         Sign in
@@ -169,7 +169,7 @@ import {
                       >
                         <UserPlusIcon
                           :active="active"
-                          class="mr-2 w-4 h-4 text-gray-400"
+                          class="w-4 h-4 mr-2 text-gray-400"
                           aria-hidden="true"
                         />
                         Register
