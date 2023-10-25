@@ -1,4 +1,6 @@
 import { reactive, computed } from "vue";
+import { orderStore } from "./orderStore";
+import router from "../router";
 
 const cartStore = reactive({
   items: {},
@@ -47,12 +49,20 @@ const cartStore = reactive({
     delete this.items[product.id];
     this.saveCartInLocalStorage();
   },
-  clearCart() {},
+  clearCart() {
+    this.items = {};
+    this.saveCartInLocalStorage();
+  },
   saveCartInLocalStorage() {
     localStorage.setItem("cart", JSON.stringify(this.items));
   },
   loadCartFromLocalStorage() {
     this.items = JSON.parse(localStorage.getItem("cart") || "{}");
+  },
+  checkout() {
+    orderStore.placeOrder(this.totalPrice, this.items);
+    router.push("/order-success");
+    this.clearCart();
   },
 });
 cartStore.loadCartFromLocalStorage();

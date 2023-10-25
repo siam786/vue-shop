@@ -4,9 +4,10 @@ import { TrashIcon } from "@heroicons/vue/24/outline";
 </script>
 <template>
   <section
+    v-if="cartStore.totalCartItems > 0"
     class="bg-slate-100 min-h-screen flex flex-col justify-center items-center"
   >
-    <div class="container">
+    <div class="container my-10">
       <div class="grid grid-cols-12 gap-x-8">
         <div class="col-span-9 bg-white p-8">
           <div>
@@ -117,7 +118,7 @@ import { TrashIcon } from "@heroicons/vue/24/outline";
             </table>
           </div>
         </div>
-        <div class="col-span-3 bg-white p-8 rounded space-y-8">
+        <div class="col-span-3 bg-white p-8 rounded space-y-8 h-[380px]">
           <h2 class="text-2xl font-[700] font-mon text-center mb-4">
             Order Summary
           </h2>
@@ -144,6 +145,7 @@ import { TrashIcon } from "@heroicons/vue/24/outline";
             </div>
           </div>
           <button
+            @click="cartStore.checkout()"
             class="bg-black text-white py-2 px-4 w-full rounded font-mon font-[800]"
           >
             Checkout
@@ -151,6 +153,11 @@ import { TrashIcon } from "@heroicons/vue/24/outline";
         </div>
       </div>
     </div>
+  </section>
+  <section v-else class="bg-slate-100 h-[600px] flex flex-col justify-center">
+    <h1 class="text-3xl font-[700] font-mon text-center pt-8">
+      Your cart is empty
+    </h1>
   </section>
 </template>
 
