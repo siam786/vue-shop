@@ -17,10 +17,12 @@ import { cartStore } from "../../store/cartStore";
     <nav class="container flex items-center justify-between">
       <div class="flex items-center gap-x-2">
         <div>
-          <h1 class="text-purple-700 text-xl font-[700] font-mon">Dokan</h1>
+          <RouterLink to="/">
+            <h1 class="text-purple-700 text-xl font-[700] font-mon">Dokan</h1>
+          </RouterLink>
         </div>
       </div>
-      <ul class="flex gap-x-4 text-purple-700 font-bold">
+      <ul class="flex justify-items-start gap-x-4 text-purple-700 font-bold">
         <li>
           <RouterLink to="/">Home</RouterLink>
         </li>

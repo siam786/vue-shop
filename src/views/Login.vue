@@ -9,13 +9,13 @@ const password = ref("");
 <template>
   <section class="bg-slate-100 h-screen flex items-center justify-center">
     <div class="bg-white px-6 max-w-lg w-full py-8 rounded">
-      <h5 class="text-2xl text-center font-[700] text-primary dark:text-white">
+      <h5 class="text-2xl text-center font-[700] text-red-700">
         Sign in to our platform
       </h5>
       <div class="my-6">
         <label
           for="email"
-          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          class="block mb-2 text-sm font-medium text-gray-900"
           >Enter Your Email</label
         >
         <div class="relative">
@@ -28,7 +28,7 @@ const password = ref("");
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="w-4 h-4 text-gray-500 dark:text-gray-400"
+              class="w-4 h-4 text-gray-500"
             >
               <path
                 stroke-linecap="round"
@@ -49,7 +49,7 @@ const password = ref("");
       <div class="my-6">
         <label
           for="password"
-          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          class="block mb-2 text-sm font-medium text-gray-900"
           >Enter Your Password</label
         >
         <div class="relative">
