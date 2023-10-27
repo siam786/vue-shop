@@ -1,28 +1,27 @@
 <script setup>
-import { authStore } from "../../store/authStore";
-import { cartStore } from "../../store/cartStore";
-import logo from "../../assets/images/eco-logo.png";
-import userIcon from "../../assets/images/user-icon.png";
-import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/vue";
-import { RouterLink } from "vue-router";
+import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/vue";
 import {
+  ArrowLeftOnRectangleIcon,
+  ArrowRightOnRectangleIcon,
   Cog6ToothIcon,
   PencilSquareIcon,
-  ArrowRightOnRectangleIcon,
-  ArrowLeftOnRectangleIcon,
   UserPlusIcon,
 } from "@heroicons/vue/24/outline";
+import { RouterLink } from "vue-router";
+import userIcon from "../../assets/images/user-icon.png";
+import { authStore } from "../../store/authStore";
+import { cartStore } from "../../store/cartStore";
 </script>
 <template>
-  <header class="py-3 bg-white shadow">
-    <nav class="container flex items-center justify-between mx-auto">
+  <header class="bg-white py-3 shadow">
+    <nav class="container flex items-center justify-between">
       <div class="flex items-center gap-x-2">
-        <!-- <img class="w-9" :src="logo" alt="Logo" /> -->
         <div>
-          <h1 class="text-heading text-xl font-[700] font-mon">Dokan</h1>
+          <h1 class="text-purple-700 text-xl font-[700] font-mon">Dokan</h1>
         </div>
-        <ul class="flex ml-5 font-bold text-purple-500 gap-x-3">
-        <li class="">
+      </div>
+      <ul class="flex gap-x-4 text-purple-700 font-bold">
+        <li>
           <RouterLink to="/">Home</RouterLink>
         </li>
         <li>
@@ -32,10 +31,8 @@ import {
           <RouterLink to="/cart">Cart</RouterLink>
         </li>
       </ul>
-      </div>
-      
       <div class="flex items-center gap-x-3">
-        <span>
+        <!-- <span>
           <RouterLink to="/wish-list">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -52,7 +49,7 @@ import {
               />
             </svg>
           </RouterLink>
-        </span>
+        </span> -->
         <div class="relative">
           <RouterLink to="/cart">
             <svg
@@ -92,38 +89,42 @@ import {
               leave-to-class="transform scale-95 opacity-0"
             >
               <MenuItems
-                class="absolute right-0 w-40 mt-2 origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                class="absolute right-0 mt-2 w-40 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
               >
                 <div v-if="authStore.isAuthenticated" class="px-1 py-1">
                   <MenuItem v-slot="{ active }">
-                    <button
-                      :class="[
-                        active ? 'bg-primary text-white' : 'text-gray-900',
-                        'group flex w-full items-center rounded-md px-2 py-2 text-sm',
-                      ]"
-                    >
-                      <PencilSquareIcon
-                        :active="active"
-                        class="w-4 h-4 mr-2 text-gray-400"
-                        aria-hidden="true"
-                      />
-                      Profile
-                    </button>
+                    <RouterLink to="/user-profile">
+                      <button
+                        :class="[
+                          active ? 'bg-primary text-white' : 'text-gray-900',
+                          'group flex w-full items-center rounded-md px-2 py-2 text-sm',
+                        ]"
+                      >
+                        <PencilSquareIcon
+                          :active="active"
+                          class="mr-2 w-4 h-4 text-gray-400"
+                          aria-hidden="true"
+                        />
+                        Profile
+                      </button>
+                    </RouterLink>
                   </MenuItem>
                   <MenuItem v-slot="{ active }">
-                    <button
-                      :class="[
-                        active ? 'bg-primary text-white' : 'text-gray-900',
-                        'group flex w-full items-center rounded-md px-2 py-2 text-sm',
-                      ]"
-                    >
-                      <Cog6ToothIcon
-                        :active="active"
-                        class="w-4 h-4 mr-2 text-gray-400"
-                        aria-hidden="true"
-                      />
-                      Settings
-                    </button>
+                    <RouterLink to="/settings">
+                      <button
+                        :class="[
+                          active ? 'bg-primary text-white' : 'text-gray-900',
+                          'group flex w-full items-center rounded-md px-2 py-2 text-sm',
+                        ]"
+                      >
+                        <Cog6ToothIcon
+                          :active="active"
+                          class="mr-2 w-4 h-4 text-gray-400"
+                          aria-hidden="true"
+                        />
+                        Settings
+                      </button>
+                    </RouterLink>
                   </MenuItem>
                   <MenuItem v-slot="{ active }">
                     <button
@@ -135,7 +136,7 @@ import {
                     >
                       <ArrowRightOnRectangleIcon
                         :active="active"
-                        class="w-4 h-4 mr-2 text-gray-400"
+                        class="mr-2 w-4 h-4 text-gray-400"
                         aria-hidden="true"
                       />
                       Sign out
@@ -153,7 +154,7 @@ import {
                       >
                         <ArrowLeftOnRectangleIcon
                           :active="active"
-                          class="w-4 h-4 mr-2 text-gray-400"
+                          class="mr-2 w-4 h-4 text-gray-400"
                           aria-hidden="true"
                         />
                         Sign in
@@ -170,7 +171,7 @@ import {
                       >
                         <UserPlusIcon
                           :active="active"
-                          class="w-4 h-4 mr-2 text-gray-400"
+                          class="mr-2 w-4 h-4 text-gray-400"
                           aria-hidden="true"
                         />
                         Register

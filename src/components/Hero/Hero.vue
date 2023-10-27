@@ -2,30 +2,22 @@
 import { RouterLink } from "vue-router";
 </script>
 <template>
-  <div class="bg-sky-700 h-[550px] flex justify-center">
-    <div class="container flex items-center justify-between mx-auto">
-      <div class="w-1/2 space-y-3">
-        
-        <h1 class="text-white text-5xl font-[800] font-mon">
-         awesome shop for every day
-        </h1>
-        <p class="text-sm text-white font-[400] font-mon">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, eligendi obcaecati accusamus autem nisi laborum cum assumenda repellat at neque ratione sit, odio nesciunt necessitatibus cumque eos cupiditate fugit aut?
-        </p>
-        <button>
-          <RouterLink
+  
+  <div class="hero min-h-screen bg-base-200">
+  <div class="hero-content flex-col lg:flex-row">
+    <img src="../../assets/images/pngimg.com - phone_hand_PNG21.png" class="max-w-sm rounded-lg shadow-2xl" />
+    <div>
+      <h1 class="text-5xl font-bold">Hurry Up Limited Offer!</h1>
+      <p class="py-6">The iPhone is a revolutionary smartphone known for its sleek design, powerful performance, and innovative features that enhance user experience</p>
+      <button class="btn btn-primary"> <RouterLink
             to="/shop"
-            class="px-4 py-2 text-white rounded bg-primary"
+            
           >
             Shop Now
-          </RouterLink>
-        </button>
-      </div>
-      <div>
-        <img class="w-80 " src="../../assets/images/pngimg.com - phone_hand_PNG21.png" alt="" />
-      </div>
+          </RouterLink></button>
     </div>
   </div>
+</div>
 </template>
 
 <style scoped></style>
